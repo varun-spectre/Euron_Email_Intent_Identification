@@ -5,33 +5,14 @@
 
 
 myfile = open('Information regarding address.eml')
-
-
-# In[209]:
-
-
 string1 = 'Content-Type: text/plain; charset="UTF-8"'
-
-
-# In[210]:
-
-
 string2 = "--"
-
-
-# In[211]:
-
-
 body = ""
 subject = ""
 fromAdress = ""
-
-
-# In[212]:
-
-
 flag= False
 count=0
+
 for line in myfile.readlines():
     
     if line[0:7] == 'Subject':
@@ -48,16 +29,6 @@ for line in myfile.readlines():
     if flag and count==1:
         body = body + " "+ line
         
-        
-
-        
-        
-        
-
-
-# In[213]:
-
-
 body = body.replace('Content-Transfer-Encoding: quoted-printable','')
 body = body.replace('=E2=80=99',"'")
 body = body.replace("= ","")
