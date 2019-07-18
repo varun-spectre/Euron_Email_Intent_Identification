@@ -1,6 +1,3 @@
-# assignment
-Spride AI assignment
-
 1st step after preprocessing the text is decide on which vectorizer to use
 Here, I used 3 vectorizers
 1. TFIDF
